@@ -74,9 +74,9 @@ class Hyperlink extends Component<HyperlinkProps, HyperlinkState> {
 
 		const componentProps = {
 			...component.props,
-			ref: undefined,
-			key: undefined,
 		};
+		delete componentProps.key;
+		delete componentProps.ref;
 
 		try {
 			this.state.linkifyIt
@@ -137,9 +137,9 @@ class Hyperlink extends Component<HyperlinkProps, HyperlinkState> {
 
 		const componentProps = {
 			...component.props,
-			ref: undefined,
-			key: undefined,
 		};
+		delete componentProps.key;
+		delete componentProps.ref;
 
 		return React.cloneElement(
 			component,
